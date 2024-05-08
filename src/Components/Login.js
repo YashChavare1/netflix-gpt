@@ -3,12 +3,11 @@ import Header from './Header';
 import { validateSignIn, validateSignUp } from "../utils/validate";
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { auth } from '../utils/firebase';
-import { useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/userSlice';
+import { POSTER_BACKGROUND } from '../utils/constants';
 
 const Login = () => {
-    const navigate = useNavigate();
     const dispatch = useDispatch();
 
     const [isSignInForm, setIsSignInForm] = useState(true);
@@ -51,7 +50,6 @@ const Login = () => {
                                     email: email,
                                     displayName: displayName,
                                 }));
-                                navigate("/browse")
                             })
                             .catch((error) => {
                                 setErrorMessage(error.message);
@@ -69,9 +67,7 @@ const Login = () => {
                     email.current.value,
                     password.current.value
                 )
-                    .then((userCredential) => {
-                        navigate("/browse");
-                    })
+                    .then((userCredential) => {})
                     .catch((error) => {
                         const errorCode = error.code;
                         const errorMessage = error.message;
@@ -86,13 +82,12 @@ const Login = () => {
 
     };
 
-
     return (
         <div>
             <Header />
             <img
                 className='absolute'
-                src='https://assets.nflxext.com/ffe/siteui/vlv3/058eee37-6c24-403a-95bd-7d85d3260ae1/e10ba8a6-b96a-4308-bee4-76fab1ebd6ca/IN-en-20240422-POP_SIGNUP_TWO_WEEKS-perspective_WEB_db9348f2-4d68-4934-b495-6d9d1be5917e_large.jpg'
+                src={POSTER_BACKGROUND}
                 alt='background poster'
             />
             <form
