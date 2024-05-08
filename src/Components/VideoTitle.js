@@ -2,7 +2,7 @@ import { ICON_PLAY, MORE_INFO } from "../utils/constants"
 
 const VideoTitle = ({ title, overview }) => {
     return (
-        <div className="w-screen aspect-video pt-[15%] px-12 absolute text-white bg-gradient-to-r from-black">
+        <div className="w-screen aspect-video pt-[15%] pl-20 absolute text-white bg-gradient-to-r from-black">
             <h3 className="text-6xl font-bold">{title}</h3>
             <p className="py-6 text-lg w-1/4">{overview}</p>
             <div className="my-4 flex">

@@ -6,6 +6,8 @@ export const POSTER_BACKGROUND = 'https://assets.nflxext.com/ffe/siteui/vlv3/058
 
 export const ICON_PLAY = "https://img.icons8.com/material-rounded/24/1A1A1A/play--v1.png";
 
+export const IMAGE_CDN_URL = "https://image.tmdb.org/t/p/w780"
+
 export const MORE_INFO = <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" className="lucide lucide-info"><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg>
 
 export const API_OPTIONS = {
